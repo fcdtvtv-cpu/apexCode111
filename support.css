@@ -1,0 +1,319 @@
+
+.support-page {
+  min-height: 75vh;
+  padding-bottom: 80px;
+}
+
+.support-hero {
+  padding: 75px 9% 65px;
+  text-align: center;
+  background: radial-gradient(
+    ellipse at 50% 0%,
+    rgba(255, 155, 69, .13),
+    transparent 68%
+  );
+}
+
+.support-hero h1 {
+  margin: 13px 0;
+  font-size: clamp(38px, 5vw, 60px);
+}
+
+.support-hero p {
+  max-width: 580px;
+  margin: 0 auto 25px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.support-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(280px, .8fr);
+  gap: 28px;
+  padding: 20px 9%;
+  align-items: start;
+}
+
+.support-main,
+.support-aside {
+  min-width: 0;
+}
+
+.support-section-heading {
+  margin: 20px 0;
+}
+
+.support-section-heading h2,
+.faq-card h2 {
+  margin: 9px 0;
+  font-size: 27px;
+}
+
+.support-section-heading p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.demo-notice {
+  display: flex;
+  gap: 12px;
+  padding: 16px;
+  margin: 20px 0;
+  background: rgba(255, 155, 69, .07);
+  border: 1px solid rgba(255, 155, 69, .2);
+  border-radius: 11px;
+}
+
+.demo-notice span {
+  color: var(--accent);
+  font-size: 19px;
+}
+
+.demo-notice p {
+  color: #c9b6a4;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.ticket-form,
+.contact-card,
+.faq-card,
+.empty-ticket-state {
+  padding: 24px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+}
+
+.ticket-form label {
+  display: block;
+  margin: 18px 0 8px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.ticket-form input,
+.ticket-form select,
+.ticket-form textarea {
+  width: 100%;
+  padding: 13px 14px;
+  color: var(--text);
+  background: #111315;
+  border: 1px solid #303336;
+  border-radius: 8px;
+  outline: none;
+  font: inherit;
+  font-size: 13px;
+  transition: border-color .2s, box-shadow .2s;
+}
+
+.ticket-form input:focus,
+.ticket-form select:focus,
+.ticket-form textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(255, 155, 69, .08);
+}
+
+.ticket-form textarea {
+  resize: vertical;
+  min-height: 130px;
+}
+
+.ticket-form select option {
+  background: #191b1d;
+}
+
+.form-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.form-footer > span {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.form-feedback {
+  margin-top: 15px;
+  color: var(--accent);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.ticket-history {
+  margin-top: 45px;
+}
+
+.empty-ticket-state {
+  text-align: center;
+  padding: 38px 20px;
+}
+
+.empty-ticket-state > span {
+  color: var(--accent);
+  font-size: 35px;
+}
+
+.empty-ticket-state h3 {
+  margin: 12px 0;
+}
+
+.empty-ticket-state p {
+  color: var(--muted);
+  font-size: 12px;
+  margin-bottom: 18px;
+}
+
+.empty-ticket-state a,
+.telegram-link {
+  color: var(--accent);
+  font-size: 13px;
+}
+
+.support-aside {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-card h3 {
+  margin: 13px 0 9px;
+  font-size: 20px;
+}
+
+.contact-card p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+.telegram-link {
+  display: inline-block;
+  padding: 11px 14px;
+  background: rgba(255, 155, 69, .09);
+  border: 1px solid rgba(255, 155, 69, .2);
+  border-radius: 8px;
+}
+
+.faq-card h2 {
+  margin-bottom: 20px;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.faq-item {
+  padding: 15px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.faq-item:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.faq-item summary {
+  position: relative;
+  padding-right: 22px;
+  color: var(--text);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.6;
+  cursor: pointer;
+  list-style: none;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  color: var(--accent);
+  font-size: 17px;
+}
+
+.faq-item[open] summary::after {
+  content: "−";
+}
+
+.faq-item p {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+@media (max-width: 900px) {
+  .support-layout {
+    grid-template-columns: 1fr;
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+
+  .support-hero {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+
+  .support-aside {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+}
+
+@media (max-width: 600px) {
+  .support-aside {
+    grid-template-columns: 1fr;
+  }
+
+  .ticket-form,
+  .contact-card,
+  .faq-card {
+    padding: 18px;
+  }
+
+  .form-footer {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .form-footer .button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ticket-form input,
+  .ticket-form select,
+  .ticket-form textarea {
+    transition: none;
+  }
+}
+
+[hidden] { display: none !important; }
+
+.ticket-admin-reply {
+  margin-top: 12px;
+  padding: 12px 14px;
+  color: var(--text);
+  background: rgba(255, 155, 69, .07);
+  border-left: 2px solid var(--accent);
+  border-radius: 0 8px 8px 0;
+  font-size: 12px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}

@@ -1,0 +1,265 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101112">
+  <meta name="description" content="Стоимость разработки и IT-услуг ApexCode.">
+
+  <title>Цены — ApexCode</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/pricing.css">
+</head>
+<body>
+
+  <header class="header">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">A</span>
+      <span>Apex<span class="accent">Code</span></span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle"
+      aria-label="Открыть меню" aria-expanded="false">☰</button>
+
+    <nav class="navigation" id="navigation">
+      <a href="index.html">Главная</a>
+      <a href="services.html">Услуги</a>
+      <a href="projects.html">Проекты</a>
+      <a href="products.html">Товары</a>
+      <a href="pricing.html" class="active">Цены</a>
+      <a href="support.html">Поддержка</a>
+    </nav>
+
+    <a href="account.html" class="account-button">Аккаунт</a>
+  </header>
+
+  <main class="pricing-page">
+
+    <section class="pricing-hero">
+      <span class="eyebrow">APEXCODE PRICING</span>
+      <h1>Стоимость <span class="accent">услуг</span></h1>
+      <p>
+        Подбираем решение под вашу задачу.
+        Стоимость зависит от сложности, сроков и функциональности проекта.
+      </p>
+      <a href="https://t.me/ApexCodeHelp"
+        target="_blank" rel="noopener noreferrer"
+        class="button primary">
+        Обсудить проект →
+      </a>
+      <button type="button" class="button secondary" data-apex-pay="Согласованный заказ ApexCode">Оплатить согласованный заказ</button>
+      <p id="paymentFeedback" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="pricing-content">
+
+      <div class="pricing-intro">
+        <span class="eyebrow">OUR SERVICES</span>
+        <h2>Направления разработки</h2>
+        <p>Выберите интересующее направление, чтобы узнать подробности.</p>
+      </div>
+
+      <div class="pricing-grid">
+
+        <article class="pricing-card">
+          <div class="pricing-icon">⌘</div>
+          <span class="pricing-category">WEB DEVELOPMENT</span>
+          <h3>Разработка сайтов</h3>
+          <p>
+            Создание современных сайтов, лендингов,
+            корпоративных страниц и веб-платформ.
+          </p>
+          <ul>
+            <li>Адаптивный дизайн</li>
+            <li>Frontend-разработка</li>
+            <li>Интерактивные элементы</li>
+            <li>Подключение backend по задаче</li>
+          </ul>
+          <div class="pricing-bottom">
+            <div>
+              <span>Стоимость</span>
+              <strong>По запросу</strong>
+            </div>
+            <a href="support.html" class="pricing-link">Обсудить →</a>
+          </div>
+        </article>
+
+        <article class="pricing-card featured">
+          <span class="popular-label">ПОПУЛЯРНОЕ НАПРАВЛЕНИЕ</span>
+          <div class="pricing-icon">◈</div>
+          <span class="pricing-category">BOT DEVELOPMENT</span>
+          <h3>Разработка ботов</h3>
+          <p>
+            Автоматизация общения, обработки заявок
+            и различных бизнес-процессов.
+          </p>
+          <ul>
+            <li>Telegram-боты</li>
+            <li>VK и Discord-боты</li>
+            <li>Интеграции с API</li>
+            <li>Сценарии и автоматизация</li>
+          </ul>
+          <div class="pricing-bottom">
+            <div>
+              <span>Стоимость</span>
+              <strong>По запросу</strong>
+            </div>
+            <a href="support.html" class="pricing-link">Обсудить →</a>
+          </div>
+        </article>
+
+        <article class="pricing-card">
+          <div class="pricing-icon">⚙</div>
+          <span class="pricing-category">AUTOMATION</span>
+          <h3>Автоматизация</h3>
+          <p>
+            Сокращение повторяющихся операций
+            и создание удобных рабочих инструментов.
+          </p>
+          <ul>
+            <li>Excel и Google Sheets</li>
+            <li>Обработка данных</li>
+            <li>Автоматические отчёты</li>
+            <li>Интеграции сервисов</li>
+          </ul>
+          <div class="pricing-bottom">
+            <div>
+              <span>Стоимость</span>
+              <strong>По запросу</strong>
+            </div>
+            <a href="support.html" class="pricing-link">Обсудить →</a>
+          </div>
+        </article>
+
+        <article class="pricing-card">
+          <div class="pricing-icon">✧</div>
+          <span class="pricing-category">AI DEVELOPMENT</span>
+          <h3>AI-разработка</h3>
+          <p>
+            Интеграция искусственного интеллекта
+            в приложения и рабочие процессы.
+          </p>
+          <ul>
+            <li>Подключение AI API</li>
+            <li>Интеллектуальные помощники</li>
+            <li>Обработка текстов и данных</li>
+            <li>Автоматизация задач</li>
+          </ul>
+          <div class="pricing-bottom">
+            <div>
+              <span>Стоимость</span>
+              <strong>По запросу</strong>
+            </div>
+            <a href="support.html" class="pricing-link">Обсудить →</a>
+          </div>
+        </article>
+
+        <article class="pricing-card">
+          <div class="pricing-icon">▣</div>
+          <span class="pricing-category">HOSTING</span>
+          <h3>Хостинг</h3>
+          <p>
+            Размещение проектов и помощь
+            с настройкой инфраструктуры.
+          </p>
+          <ul>
+            <li>Размещение сайтов</li>
+            <li>Размещение ботов</li>
+            <li>Настройка окружения</li>
+            <li>Консультации по инфраструктуре</li>
+          </ul>
+          <div class="pricing-bottom">
+            <div>
+              <span>Стоимость</span>
+              <strong>По запросу</strong>
+            </div>
+            <a href="support.html" class="pricing-link">Обсудить →</a>
+          </div>
+        </article>
+
+        <article class="pricing-card">
+          <div class="pricing-icon">⇄</div>
+          <span class="pricing-category">INTEGRATIONS</span>
+          <h3>Интеграции</h3>
+          <p>
+            Соединение сервисов и систем
+            для обмена информацией.
+          </p>
+          <ul>
+            <li>API-интеграции</li>
+            <li>Webhooks</li>
+            <li>Платёжные интеграции</li>
+            <li>Обмен данными</li>
+          </ul>
+          <div class="pricing-bottom">
+            <div>
+              <span>Стоимость</span>
+              <strong>По запросу</strong>
+            </div>
+            <a href="support.html" class="pricing-link">Обсудить →</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="pricing-process">
+      <span class="eyebrow">HOW IT WORKS</span>
+      <h2>Как формируется стоимость?</h2>
+
+      <div class="process-grid">
+        <article>
+          <span>01</span>
+          <h3>Обсуждение</h3>
+          <p>Вы рассказываете о своей задаче и требованиях.</p>
+        </article>
+
+        <article>
+          <span>02</span>
+          <h3>Оценка</h3>
+          <p>Мы определяем объём, сложность и необходимые технологии.</p>
+        </article>
+
+        <article>
+          <span>03</span>
+          <h3>Предложение</h3>
+          <p>Согласовываем стоимость, сроки и состав работ.</p>
+        </article>
+
+        <article>
+          <span>04</span>
+          <h3>Разработка</h3>
+          <p>После согласования приступаем к выполнению проекта.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="pricing-cta">
+      <span class="eyebrow">LET'S BUILD SOMETHING</span>
+      <h2>Есть идея для проекта?</h2>
+      <p>Расскажите нам о ней — обсудим возможное решение.</p>
+      <a href="https://t.me/ApexCodeHelp"
+        target="_blank" rel="noopener noreferrer"
+        class="button primary">
+        Связаться с ApexCode →
+      </a>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">A</span>
+      <span>Apex<span class="accent">Code</span></span>
+    </a>
+    <p>© 2026 ApexCode. Все права защищены.</p>
+    <span class="footer-caption">Создаём. Автоматизируем. Развиваем.</span>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/payments.js"></script>
+</body>
+</html>

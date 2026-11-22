@@ -1,0 +1,302 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101112">
+  <meta name="description" content="Личный кабинет ApexCode.">
+
+  <title>Личный кабинет — ApexCode</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/account.css">
+</head>
+<body>
+
+  <header class="header">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">A</span>
+      <span>Apex<span class="accent">Code</span></span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle"
+      aria-label="Открыть меню" aria-expanded="false">☰</button>
+
+    <nav class="navigation" id="navigation">
+      <a href="index.html">Главная</a>
+      <a href="services.html">Услуги</a>
+      <a href="projects.html">Проекты</a>
+      <a href="products.html">Товары</a>
+      <a href="pricing.html">Цены</a>
+      <a href="index.html#contacts">Контакты</a>
+      <a href="support.html">Поддержка</a>
+    </nav>
+
+    <a href="account.html" class="account-button">Аккаунт</a>
+  </header>
+
+  <main class="account-page">
+
+    <section class="account-heading">
+      <span class="eyebrow">APEXCODE PERSONAL AREA</span>
+      <h1>Личный <span class="accent">кабинет</span></h1>
+      <p>Управляйте профилем, заявками и настройками аккаунта.</p>
+    </section>
+
+    <div class="account-layout">
+
+      <aside class="account-sidebar">
+        <div class="profile-summary">
+          <div class="profile-avatar" id="sidebarAvatar">G</div>
+          <div>
+            <strong id="sidebarUserName">Гость</strong>
+            <span id="sidebarUserStatus">Не авторизован</span>
+          </div>
+        </div>
+
+        <nav class="account-menu" aria-label="Разделы личного кабинета">
+          <button class="account-tab active" data-tab="overview">
+            <span>⌂</span> Обзор
+          </button>
+          <button class="account-tab" data-tab="profile">
+            <span>♙</span> Мой профиль
+          </button>
+          <button class="account-tab" data-tab="applications">
+            <span>▤</span> Мои заявки
+          </button>
+          <button class="account-tab" data-tab="orders">
+            <span>▣</span> Мои заказы
+          </button>
+          <button class="account-tab" data-tab="favorites">
+            <span>♡</span> Избранное
+          </button>
+          <button class="account-tab" data-tab="notifications">
+            <span>♢</span> Уведомления
+          </button>
+          <button class="account-tab" data-tab="security">
+            <span>⬡</span> Безопасность
+          </button>
+        </nav>
+
+        <a class="support-link" href="https://t.me/ApexCodeHelp"
+          target="_blank" rel="noopener noreferrer">
+          Техническая поддержка →
+        </a>
+      </aside>
+
+      <section class="account-content">
+
+        <section class="account-card auth-card" id="authPanel">
+          <span class="eyebrow">YOUR APEXCODE ACCOUNT</span>
+          <h2 id="authHeading">Войти в аккаунт</h2>
+          <p class="auth-intro">Войдите или создайте аккаунт, чтобы видеть свои обращения и заказы.</p>
+          <p class="auth-privacy">Имя, email и обращения сохраняются на сервере сайта. Не используйте здесь пароль от других сервисов.</p>
+          <form id="loginForm" class="auth-form">
+            <label for="loginEmail">Email</label>
+            <input id="loginEmail" name="email" type="email" autocomplete="email" maxlength="254" required placeholder="name@example.com">
+            <label for="loginPassword">Пароль</label>
+            <input id="loginPassword" name="password" type="password" autocomplete="current-password" required minlength="10" maxlength="128" placeholder="Не менее 10 символов">
+            <button class="button primary" type="submit">Войти</button>
+          </form>
+          <form id="registerForm" class="auth-form" hidden>
+            <label for="registerName">Имя</label>
+            <input id="registerName" name="name" autocomplete="name" maxlength="60" required placeholder="Как к вам обращаться">
+            <label for="registerEmail">Email</label>
+            <input id="registerEmail" name="email" type="email" autocomplete="email" maxlength="254" required placeholder="name@example.com">
+            <label for="registerPassword">Пароль</label>
+            <input id="registerPassword" name="password" type="password" autocomplete="new-password" minlength="10" maxlength="128" required placeholder="Минимум 10 символов">
+            <button class="button primary" type="submit">Создать аккаунт</button>
+          </form>
+          <p class="auth-feedback" id="authFeedback" role="status" aria-live="polite"></p>
+          <button class="auth-switch" id="authSwitch" type="button">Нет аккаунта? Зарегистрироваться</button>
+          <button class="auth-switch" id="logoutButton" type="button" hidden>Выйти из аккаунта</button>
+        </section>
+
+        <!-- ОБЗОР -->
+        <section class="tab-panel active" id="tab-overview">
+          <div class="panel-heading">
+            <div>
+              <span class="eyebrow">DASHBOARD</span>
+              <h2>Добро пожаловать!</h2>
+              <p>Здесь будет отображаться ваша активность на ApexCode.</p>
+            </div>
+          </div>
+
+          <div class="account-stats">
+            <article class="stat-card">
+              <span>Заявки</span>
+              <strong id="applicationsCount">—</strong>
+              <small>Обращения</small>
+            </article>
+            <article class="stat-card">
+              <span>Заказы</span>
+              <strong id="ordersCount">—</strong>
+              <small>Заказы</small>
+            </article>
+            <article class="stat-card">
+              <span>Избранное</span>
+              <strong id="favoritesCount">0</strong>
+              <small>В этом браузере</small>
+            </article>
+          </div>
+
+          <div class="account-card">
+            <span class="eyebrow">GET STARTED</span>
+            <h3>Ваш аккаунт ApexCode</h3>
+            <p>
+              В будущем здесь можно будет просматривать заявки,
+              следить за заказами и управлять настройками профиля.
+            </p>
+            <a href="index.html#contacts" class="button primary">
+              Перейти к контактам
+            </a>
+          </div>
+
+          <div class="account-card">
+            <h3>Быстрые ссылки</h3>
+            <div class="quick-links">
+              <a href="services.html">Наши услуги →</a>
+              <a href="products.html">Каталог товаров →</a>
+              <a href="projects.html">Портфолио →</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- ПРОФИЛЬ -->
+        <section class="tab-panel" id="tab-profile" hidden>
+          <div class="panel-heading">
+            <span class="eyebrow">PERSONAL INFORMATION</span>
+            <h2>Мой профиль</h2>
+            <p>Информация о вашем аккаунте.</p>
+          </div>
+
+          <div class="account-card">
+            <div class="profile-large-avatar" id="profileAvatar">G</div>
+            <h3 id="profileTitle">Гостевой режим</h3>
+            <p>Данные профиля загружаются из вашего аккаунта.</p>
+            <div class="information-row">
+              <span>Имя</span>
+              <strong id="profileName">Не указано</strong>
+            </div>
+            <div class="information-row">
+              <span>Email</span>
+              <strong id="profileEmail">Не подключён</strong>
+            </div>
+            <div class="information-row">
+              <span>Telegram</span>
+              <strong>Не подключён</strong>
+            </div>
+          </div>
+        </section>
+
+        <!-- ЗАЯВКИ -->
+        <section class="tab-panel" id="tab-applications" hidden>
+          <div class="panel-heading">
+            <span class="eyebrow">APPLICATIONS</span>
+            <h2>Мои заявки</h2>
+            <p>История обращений по товарам и услугам.</p>
+          </div>
+
+          <div class="empty-state">
+            <span>▤</span>
+            <h3>Заявок пока нет</h3>
+            <p id="applicationsEmptyText">Войдите в аккаунт, чтобы увидеть обращения.</p>
+            <a href="services.html" class="button primary">Выбрать услугу</a>
+          </div>
+        </section>
+
+        <!-- ЗАКАЗЫ -->
+        <section class="tab-panel" id="tab-orders" hidden>
+          <div class="panel-heading">
+            <span class="eyebrow">ORDERS</span>
+            <h2>Мои заказы</h2>
+            <p>Статусы и история ваших заказов.</p>
+          </div>
+
+          <div class="empty-state">
+            <span>▣</span>
+            <h3>Заказов пока нет</h3>
+            <p id="ordersEmptyText">Войдите в аккаунт, чтобы увидеть заказы.</p>
+            <a href="products.html" class="button primary">Открыть каталог</a>
+          </div>
+        </section>
+
+        <!-- ИЗБРАННОЕ -->
+        <section class="tab-panel" id="tab-favorites" hidden>
+          <div class="panel-heading">
+            <span class="eyebrow">FAVORITES</span>
+            <h2>Избранное</h2>
+            <p>Сохранённые товары и услуги.</p>
+          </div>
+
+          <div class="empty-state" id="favoritesEmpty">
+            <span>♡</span>
+            <h3>Пока ничего не добавлено</h3>
+            <p>Нажмите на сердечко в каталоге, чтобы сохранить товар в избранное.</p>
+            <a href="products.html" class="button primary">Открыть товары</a>
+          </div>
+          <div class="saved-favorites" id="savedFavorites" aria-live="polite"></div>
+        </section>
+
+        <!-- УВЕДОМЛЕНИЯ -->
+        <section class="tab-panel" id="tab-notifications" hidden>
+          <div class="panel-heading">
+            <span class="eyebrow">NOTIFICATIONS</span>
+            <h2>Уведомления</h2>
+            <p>События и обновления вашего аккаунта.</p>
+          </div>
+
+          <div class="empty-state">
+            <span>♢</span>
+            <h3>Пока нет уведомлений</h3>
+            <p>Новые сообщения и изменения статусов будут появляться здесь.</p>
+          </div>
+        </section>
+
+        <!-- БЕЗОПАСНОСТЬ -->
+        <section class="tab-panel" id="tab-security" hidden>
+          <div class="panel-heading">
+            <span class="eyebrow">ACCOUNT SECURITY</span>
+            <h2>Безопасность</h2>
+            <p>Настройки защиты аккаунта.</p>
+          </div>
+
+          <div class="account-card">
+            <div class="information-row">
+              <span>Email</span>
+              <strong>Не подключён</strong>
+            </div>
+            <div class="information-row">
+              <span>Telegram</span>
+              <strong>Не подключён</strong>
+            </div>
+            <div class="information-row">
+              <span>Активные сессии</span>
+              <strong>Недоступно</strong>
+            </div>
+            <p class="security-note">
+              Пароль хранится в виде криптографического хеша. Выход
+              завершает текущую сессию на этом устройстве.
+            </p>
+          </div>
+        </section>
+
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">A</span>
+      <span>Apex<span class="accent">Code</span></span>
+    </a>
+    <p>© 2026 ApexCode. Все права защищены.</p>
+    <span class="footer-caption">Создаём. Автоматизируем. Развиваем.</span>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/account.js"></script>
+</body>
+</html>

@@ -1,0 +1,245 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101112">
+  <meta name="description" content="Услуги ApexCode: разработка сайтов и ботов, автоматизация, AI и хостинг.">
+
+  <title>Услуги — ApexCode</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/services.css">
+</head>
+<body>
+
+  <header class="header">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">A</span>
+      <span>Apex<span class="accent">Code</span></span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle"
+      aria-label="Открыть меню" aria-expanded="false">☰</button>
+
+    <nav class="navigation" id="navigation">
+      <a href="index.html">Главная</a>
+      <a href="services.html" class="active">Услуги</a>
+      <a href="index.html#projects">Проекты</a>
+      <a href="index.html#products">Товары</a>
+      <a href="pricing.html">Цены</a>
+      <a href="index.html#contacts">Контакты</a>
+      <a href="support.html">Поддержка</a>
+    </nav>
+
+    <a href="index.html#contacts" class="account-button">Связаться</a>
+  </header>
+
+  <main>
+    <section class="services-hero">
+      <span class="eyebrow">APEXCODE SERVICES</span>
+      <h1>Наши <span class="accent">услуги</span></h1>
+      <p>
+        Создаём цифровые продукты, автоматизируем процессы
+        и разрабатываем решения под ваши задачи.
+      </p>
+
+      <div class="services-stats">
+        <div>
+          <strong>06</strong>
+          <span>Направлений</span>
+        </div>
+        <div>
+          <strong>∞</strong>
+          <span>Возможностей</span>
+        </div>
+        <div>
+          <strong>01</strong>
+          <span>Цель — ваш результат</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="services-catalog">
+      <div class="catalog-heading">
+        <div>
+          <span class="eyebrow">OUR EXPERTISE</span>
+          <h2>Каталог услуг</h2>
+        </div>
+
+        <input
+          type="search"
+          id="serviceSearch"
+          placeholder="Поиск услуг..."
+          aria-label="Поиск услуг"
+        >
+      </div>
+
+      <div class="service-filters" id="serviceFilters">
+        <button class="filter-button active" data-filter="all">Все услуги</button>
+        <button class="filter-button" data-filter="development">Разработка</button>
+        <button class="filter-button" data-filter="automation">Автоматизация</button>
+        <button class="filter-button" data-filter="ai">AI</button>
+        <button class="filter-button" data-filter="hosting">Хостинг</button>
+        <button class="filter-button" data-filter="integrations">Интеграции</button>
+      </div>
+
+      <div class="service-grid" id="serviceGrid">
+
+        <article class="service-card" data-category="development"
+          data-search="сайт веб разработка frontend backend лендинг">
+          <div class="service-top">
+            <span class="service-icon">⌘</span>
+            <span class="service-number">01</span>
+          </div>
+          <span class="service-category">DEVELOPMENT</span>
+          <h3>Разработка сайтов</h3>
+          <p>
+            Создание современных сайтов, лендингов, каталогов
+            и веб-интерфейсов с адаптацией под мобильные устройства.
+          </p>
+          <ul>
+            <li>Корпоративные сайты</li>
+            <li>Каталоги и витрины</li>
+            <li>Адаптивный дизайн</li>
+            <li>Интеграция с API</li>
+          </ul>
+          <a href="index.html#contacts" class="service-link">Обсудить проект →</a>
+        </article>
+
+        <article class="service-card" data-category="development"
+          data-search="telegram vk discord max бот разработка">
+          <div class="service-top">
+            <span class="service-icon">✉</span>
+            <span class="service-number">02</span>
+          </div>
+          <span class="service-category">BOT DEVELOPMENT</span>
+          <h3>Разработка ботов</h3>
+          <p>
+            Создание ботов и автоматизированных помощников
+            для общения с клиентами и обработки заявок.
+          </p>
+          <ul>
+            <li>Telegram</li>
+            <li>VK</li>
+            <li>Discord</li>
+            <li>MAX</li>
+          </ul>
+          <a href="index.html#contacts" class="service-link">Обсудить проект →</a>
+        </article>
+
+        <article class="service-card" data-category="automation"
+          data-search="автоматизация excel google sheets парсинг мониторинг">
+          <div class="service-top">
+            <span class="service-icon">⚙</span>
+            <span class="service-number">03</span>
+          </div>
+          <span class="service-category">AUTOMATION</span>
+          <h3>Автоматизация</h3>
+          <p>
+            Упрощаем повторяющиеся задачи, соединяем сервисы
+            и автоматизируем работу с данными.
+          </p>
+          <ul>
+            <li>Excel и Google Sheets</li>
+            <li>Обработка данных</li>
+            <li>Мониторинг информации</li>
+            <li>Автоматические отчёты</li>
+          </ul>
+          <a href="index.html#contacts" class="service-link">Обсудить проект →</a>
+        </article>
+
+        <article class="service-card" data-category="ai"
+          data-search="искусственный интеллект нейросети ai интеграция помощник">
+          <div class="service-top">
+            <span class="service-icon">✧</span>
+            <span class="service-number">04</span>
+          </div>
+          <span class="service-category">AI DEVELOPMENT</span>
+          <h3>AI-разработка</h3>
+          <p>
+            Интеграция интеллектуальных инструментов
+            в сайты, ботов и рабочие процессы.
+          </p>
+          <ul>
+            <li>AI-помощники</li>
+            <li>Ответы на основе базы знаний</li>
+            <li>Интеграция AI API</li>
+            <li>Обработка текстовых запросов</li>
+          </ul>
+          <a href="index.html#contacts" class="service-link">Обсудить проект →</a>
+        </article>
+
+        <article class="service-card" data-category="hosting"
+          data-search="хостинг сервер размещение сайт бот поддержка">
+          <div class="service-top">
+            <span class="service-icon">▣</span>
+            <span class="service-number">05</span>
+          </div>
+          <span class="service-category">HOSTING</span>
+          <h3>Хостинг</h3>
+          <p>
+            Помощь с размещением сайтов и ботов,
+            настройкой окружения и технической поддержкой.
+          </p>
+          <ul>
+            <li>Размещение сайтов</li>
+            <li>Размещение ботов</li>
+            <li>Настройка окружения</li>
+            <li>Мониторинг доступности</li>
+          </ul>
+          <a href="index.html#contacts" class="service-link">Обсудить проект →</a>
+        </article>
+
+        <article class="service-card" data-category="integrations"
+          data-search="api интеграция платежи сервисы подключение webhook">
+          <div class="service-top">
+            <span class="service-icon">⇄</span>
+            <span class="service-number">06</span>
+          </div>
+          <span class="service-category">INTEGRATIONS</span>
+          <h3>Интеграции</h3>
+          <p>
+            Соединение внешних платформ, API и платёжных
+            сервисов в единую систему.
+          </p>
+          <ul>
+            <li>API и Webhook</li>
+            <li>Интеграция сервисов</li>
+            <li>Платёжные интеграции</li>
+            <li>Автоматическая обработка событий</li>
+          </ul>
+          <a href="index.html#contacts" class="service-link">Обсудить проект →</a>
+        </article>
+
+      </div>
+
+      <p class="empty-results" id="emptyResults" hidden>
+        По вашему запросу ничего не найдено.
+      </p>
+    </section>
+
+    <section class="services-cta">
+      <span class="eyebrow">YOUR IDEA. OUR TECHNOLOGY.</span>
+      <h2>Не нашли нужную услугу?</h2>
+      <p>Расскажите о своей задаче — обсудим возможное решение.</p>
+      <a href="https://t.me/ApexCodeHelp"
+         target="_blank" rel="noopener noreferrer"
+         class="button primary">Написать в поддержку</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">A</span>
+      <span>Apex<span class="accent">Code</span></span>
+    </a>
+    <p>© 2026 ApexCode. Все права защищены.</p>
+    <span class="footer-caption">Создаём. Автоматизируем. Развиваем.</span>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/services.js"></script>
+</body>
+</html>

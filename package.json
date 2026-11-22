@@ -1,0 +1,17 @@
+{
+  "name": "apexcode-site",
+  "version": "2.0.0",
+  "private": true,
+  "description": "ApexCode website with PostgreSQL, admin bot, support uploads and Stripe Checkout",
+  "scripts": {"start": "node server.js", "dev": "node --watch server.js", "db:migrate": "node scripts/migrate.js"},
+  "engines": {"node": ">=20"},
+  "dependencies": {
+    "connect-pg-simple": "^10.0.0",
+    "express": "^5.1.0",
+    "express-rate-limit": "^7.5.0",
+    "express-session": "^1.18.1",
+    "helmet": "^8.0.0",
+    "multer": "^1.4.5-lts.1",
+    "pg": "^8.13.1"
+  }
+}

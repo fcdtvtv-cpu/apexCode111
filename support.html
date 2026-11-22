@@ -1,0 +1,241 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101112">
+  <meta name="description" content="Центр поддержки ApexCode.">
+  <title>Поддержка — ApexCode</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/support.css">
+</head>
+<body>
+
+  <header class="header">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">A</span>
+      <span>Apex<span class="accent">Code</span></span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle"
+      aria-label="Открыть меню" aria-expanded="false">☰</button>
+
+    <nav class="navigation" id="navigation">
+      <a href="index.html">Главная</a>
+      <a href="services.html">Услуги</a>
+      <a href="projects.html">Проекты</a>
+      <a href="products.html">Товары</a>
+      <a href="pricing.html">Цены</a>
+      <a href="index.html#contacts">Контакты</a>
+      <a href="support.html" class="active">Поддержка</a>
+    </nav>
+
+    <a href="account.html" class="account-button">Аккаунт</a>
+  </header>
+
+  <main class="support-page">
+
+    <section class="support-hero">
+      <span class="eyebrow">APEXCODE SUPPORT CENTER</span>
+      <h1>Центр <span class="accent">поддержки</span></h1>
+      <p>
+        Поможем разобраться с услугами, заказами и техническими вопросами.
+      </p>
+
+      <a class="button primary"
+        href="https://t.me/ApexCodeHelp"
+        target="_blank" rel="noopener noreferrer">
+        Написать в Telegram →
+      </a>
+    </section>
+
+    <div class="support-layout">
+
+      <section class="support-main">
+
+        <div class="support-section-heading">
+          <span class="eyebrow">CONTACT US</span>
+          <h2>Создать обращение</h2>
+          <p>Опишите вопрос, и мы поможем найти решение.</p>
+        </div>
+
+        <div class="demo-notice">
+          <span>ⓘ</span>
+          <p>
+            Обращения сохраняются в аккаунте. Для создания обращения
+            сначала войдите в личный кабинет. Не отправляйте пароли,
+            платёжные данные или другую конфиденциальную информацию.
+          </p>
+        </div>
+
+        <form class="ticket-form" id="ticketForm">
+          <label for="ticketSubject">Тема обращения</label>
+          <input
+            type="text"
+            id="ticketSubject"
+            name="subject"
+            maxlength="100"
+            placeholder="Например: Вопрос по заказу"
+            required
+          >
+
+          <label for="ticketCategory">Категория</label>
+          <select id="ticketCategory" name="category" required>
+            <option value="">Выберите категорию</option>
+            <option value="account">Аккаунт</option>
+            <option value="products">Товары и услуги</option>
+            <option value="applications">Заявки и заказы</option>
+            <option value="payments">Оплата</option>
+            <option value="bots">Telegram-боты</option>
+            <option value="security">Безопасность</option>
+            <option value="technical">Технические вопросы</option>
+            <option value="other">Другое</option>
+          </select>
+
+          <label for="ticketPriority">Желаемый приоритет</label>
+          <select id="ticketPriority" name="priority">
+            <option value="normal">Обычный</option>
+            <option value="low">Низкий</option>
+            <option value="high">Высокий</option>
+            <option value="critical">Критический</option>
+          </select>
+
+          <label for="ticketRelated">Номер заявки или заказа (необязательно)</label>
+          <input
+            type="text"
+            id="ticketRelated"
+            name="related"
+            maxlength="40"
+            placeholder="Например: AC-1001"
+          >
+
+          <label for="ticketMessage">Описание вопроса</label>
+          <textarea
+            id="ticketMessage"
+            name="message"
+            rows="6"
+            maxlength="3000"
+            placeholder="Подробно опишите, что произошло или какая помощь нужна..."
+            required
+          ></textarea>
+
+          <label for="ticketFile">Файл к обращению (необязательно, до 8 МБ)</label>
+          <input type="file" id="ticketFile" name="file" accept=".pdf,.png,.jpg,.jpeg,.webp,.txt,application/pdf,image/png,image/jpeg,image/webp,text/plain">
+
+          <div class="form-footer">
+            <span>До 3000 символов</span>
+            <button type="submit" class="button primary">
+              Создать обращение
+            </button>
+          </div>
+
+          <p class="form-feedback" id="formFeedback" role="status"
+            aria-live="polite"></p>
+        </form>
+
+        <section class="ticket-history">
+          <div class="support-section-heading">
+            <span class="eyebrow">MY TICKETS</span>
+            <h2>Мои обращения</h2>
+            <p>История обращений доступна после входа в аккаунт.</p>
+          </div>
+
+          <div class="empty-ticket-state" id="ticketHistoryEmpty">
+            <span>▤</span>
+            <h3>Обращений пока нет</h3>
+            <p>Войдите в аккаунт, чтобы создать обращение и видеть историю.</p>
+            <a href="account.html">Перейти в личный кабинет →</a>
+          </div>
+          <div class="ticket-history-list" id="ticketHistoryList" aria-live="polite"></div>
+        </section>
+      </section>
+
+      <aside class="support-aside">
+
+        <div class="contact-card">
+          <span class="eyebrow">DIRECT CONTACT</span>
+          <h3>Нужна быстрая помощь?</h3>
+          <p>Свяжитесь с поддержкой напрямую через Telegram.</p>
+          <a href="https://t.me/ApexCodeHelp"
+            target="_blank" rel="noopener noreferrer"
+            class="telegram-link">
+            @ApexCodeHelp →
+          </a>
+        </div>
+
+        <div class="faq-card">
+          <span class="eyebrow">FAQ</span>
+          <h2>Частые вопросы</h2>
+
+          <div class="faq-list">
+
+            <details class="faq-item">
+              <summary>Как оставить заявку на услугу?</summary>
+              <p>
+                Откройте страницу услуг, выберите подходящее направление
+                и свяжитесь с нами для обсуждения задачи.
+              </p>
+            </details>
+
+            <details class="faq-item">
+              <summary>Как узнать статус заказа?</summary>
+              <p>
+                После входа в аккаунт откройте раздел «Мои заказы».
+                Там отображаются отправленные заявки и их текущие статусы.
+              </p>
+            </details>
+
+            <details class="faq-item">
+              <summary>Можно ли заказать собственного бота?</summary>
+              <p>
+                Да. Напишите нам, расскажите о задаче и желаемых функциях.
+                Мы обсудим требования и возможные варианты реализации.
+              </p>
+            </details>
+
+            <details class="faq-item">
+              <summary>Как связаться с поддержкой?</summary>
+              <p>
+                Напишите в Telegram: @ApexCodeHelp.
+              </p>
+            </details>
+
+            <details class="faq-item">
+              <summary>Как работает система обращений?</summary>
+              <p>
+                У каждого обращения есть номер, описание и статус.
+                История отображается в этом разделе и в личном кабинете.
+              </p>
+            </details>
+
+            <details class="faq-item">
+              <summary>Можно ли приложить файл?</summary>
+              <p>
+                Прикрепление файлов пока не поддерживается. Не отправляйте
+                пароли, платёжные данные и другие секреты в сообщениях.
+              </p>
+            </details>
+
+          </div>
+        </div>
+
+      </aside>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">A</span>
+      <span>Apex<span class="accent">Code</span></span>
+    </a>
+    <p>© 2026 ApexCode. Все права защищены.</p>
+    <span class="footer-caption">Создаём. Автоматизируем. Развиваем.</span>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/support.js"></script>
+</body>
+</html>

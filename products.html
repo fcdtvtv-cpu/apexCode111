@@ -1,0 +1,308 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101112">
+  <meta name="description" content="Каталог цифровых товаров ApexCode.">
+
+  <title>Каталог товаров — ApexCode</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/products.css">
+</head>
+<body>
+
+  <header class="header">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">A</span>
+      <span>Apex<span class="accent">Code</span></span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle"
+      aria-label="Открыть меню" aria-expanded="false">☰</button>
+
+    <nav class="navigation" id="navigation">
+      <a href="index.html">Главная</a>
+      <a href="services.html">Услуги</a>
+      <a href="projects.html">Проекты</a>
+      <a href="products.html" class="active">Товары</a>
+      <a href="pricing.html">Цены</a>
+      <a href="index.html#contacts">Контакты</a>
+      <a href="support.html">Поддержка</a>
+    </nav>
+
+    <a href="index.html#contacts" class="account-button">Связаться</a>
+  </header>
+
+  <main>
+    <section class="products-hero">
+      <span class="eyebrow">APEXCODE MARKET</span>
+      <h1>Каталог <span class="accent">товаров</span></h1>
+      <p>
+        Цифровые продукты и решения в одном месте.
+        Выберите интересующую категорию и изучите предложения.
+      </p>
+    </section>
+
+    <section class="products-section">
+      <div class="products-toolbar">
+        <div>
+          <span class="eyebrow">EXPLORE CATALOG</span>
+          <h2>Все товары</h2>
+        </div>
+
+        <input
+          type="search"
+          id="productSearch"
+          placeholder="Поиск товаров..."
+          aria-label="Поиск товаров"
+        >
+      </div>
+
+      <div class="products-layout">
+
+        <aside class="products-sidebar">
+          <h3>Категории</h3>
+
+          <button class="category-button active" data-category="all">
+            Все товары
+          </button>
+
+          <button class="category-button" data-category="games">
+            Игры
+          </button>
+
+          <button class="category-button" data-category="software">
+            Программы
+          </button>
+
+          <button class="category-button" data-category="digital">
+            Цифровые товары
+          </button>
+
+          <button class="category-button" data-category="macros">
+            Макросы
+          </button>
+
+          <button class="category-button" data-category="other">
+            Другое
+          </button>
+
+          <div class="sidebar-note">
+            <span>✦</span>
+            <p>Каталог будет постепенно пополняться новыми предложениями.</p>
+          </div>
+        </aside>
+
+        <div class="products-main">
+
+          <div class="products-controls">
+            <span id="productCount">Товары каталога</span>
+
+            <select id="productSort" aria-label="Сортировка товаров">
+              <option value="default">По умолчанию</option>
+              <option value="name">По названию</option>
+            </select>
+          </div>
+
+          <div class="products-grid" id="productsGrid">
+
+            <article class="product-card"
+              data-category="games"
+              data-name="Игровые цифровые решения"
+              data-search="игры игровые цифровые решения">
+
+              <div class="product-image product-image-one">
+                <span class="product-visual-icon">🎮</span>
+                <span class="product-label">GAMES</span>
+              </div>
+
+              <div class="product-info">
+                <span class="product-category">ИГРЫ</span>
+                <h3>Игровые цифровые решения</h3>
+                <p>Категория игровых цифровых предложений.</p>
+
+                <div class="product-bottom">
+                  <span class="product-price">По запросу</span>
+                  <button class="details-button"
+                    data-product="Игровые цифровые решения"
+                    data-description="Категория игровых цифровых предложений. Уточните доступность и характеристики перед оформлением заявки.">
+                    Подробнее
+                  </button>
+                </div>
+
+                <button class="favorite-button" aria-label="Добавить в избранное"
+                  aria-pressed="false">♡</button>
+              </div>
+            </article>
+
+            <article class="product-card"
+              data-category="software"
+              data-name="Программное обеспечение"
+              data-search="программы софт приложения программное обеспечение">
+
+              <div class="product-image product-image-two">
+                <span class="product-visual-icon">▣</span>
+                <span class="product-label">SOFTWARE</span>
+              </div>
+
+              <div class="product-info">
+                <span class="product-category">ПРОГРАММЫ</span>
+                <h3>Программное обеспечение</h3>
+                <p>Программные продукты и цифровые инструменты.</p>
+
+                <div class="product-bottom">
+                  <span class="product-price">По запросу</span>
+                  <button class="details-button"
+                    data-product="Программное обеспечение"
+                    data-description="Программные продукты и цифровые инструменты. Уточните совместимость, лицензию и условия использования.">
+                    Подробнее
+                  </button>
+                </div>
+
+                <button class="favorite-button" aria-label="Добавить в избранное"
+                  aria-pressed="false">♡</button>
+              </div>
+            </article>
+
+            <article class="product-card"
+              data-category="digital"
+              data-name="Цифровые продукты"
+              data-search="цифровые продукты файлы материалы">
+
+              <div class="product-image product-image-three">
+                <span class="product-visual-icon">✧</span>
+                <span class="product-label">DIGITAL</span>
+              </div>
+
+              <div class="product-info">
+                <span class="product-category">ЦИФРОВЫЕ ТОВАРЫ</span>
+                <h3>Цифровые продукты</h3>
+                <p>Цифровые материалы и другие электронные продукты.</p>
+
+                <div class="product-bottom">
+                  <span class="product-price">По запросу</span>
+                  <button class="details-button"
+                    data-product="Цифровые продукты"
+                    data-description="Цифровые материалы и электронные продукты. Состав и формат уточняются для каждого предложения.">
+                    Подробнее
+                  </button>
+                </div>
+
+                <button class="favorite-button" aria-label="Добавить в избранное"
+                  aria-pressed="false">♡</button>
+              </div>
+            </article>
+
+            <article class="product-card"
+              data-category="macros"
+              data-name="Макросы и настройки"
+              data-search="макросы настройки совместимость игры">
+
+              <div class="product-image product-image-four">
+                <span class="product-visual-icon">⌘</span>
+                <span class="product-label">MACROS</span>
+              </div>
+
+              <div class="product-info">
+                <span class="product-category">МАКРОСЫ</span>
+                <h3>Макросы и настройки</h3>
+                <p>Каталог описаний, совместимости и настроек продуктов.</p>
+
+                <div class="product-bottom">
+                  <span class="product-price">По запросу</span>
+                  <button class="details-button"
+                    data-product="Макросы и настройки"
+                    data-description="Информация о совместимости, назначении и настройках. Доступность и характеристики уточняются отдельно.">
+                    Подробнее
+                  </button>
+                </div>
+
+                <button class="favorite-button" aria-label="Добавить в избранное"
+                  aria-pressed="false">♡</button>
+              </div>
+            </article>
+
+            <article class="product-card"
+              data-category="other"
+              data-name="Другие предложения"
+              data-search="другие предложения товары">
+
+              <div class="product-image product-image-five">
+                <span class="product-visual-icon">◇</span>
+                <span class="product-label">OTHER</span>
+              </div>
+
+              <div class="product-info">
+                <span class="product-category">ДРУГОЕ</span>
+                <h3>Другие предложения</h3>
+                <p>Дополнительные товары и решения ApexCode.</p>
+
+                <div class="product-bottom">
+                  <span class="product-price">По запросу</span>
+                  <button class="details-button"
+                    data-product="Другие предложения"
+                    data-description="Дополнительные предложения ApexCode. Состав и условия уточняются отдельно.">
+                    Подробнее
+                  </button>
+                </div>
+
+                <button class="favorite-button" aria-label="Добавить в избранное"
+                  aria-pressed="false">♡</button>
+              </div>
+            </article>
+
+          </div>
+
+          <p class="empty-products" id="emptyProducts" hidden>
+            По вашему запросу товары не найдены.
+          </p>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="products-cta">
+      <span class="eyebrow">NEED SOMETHING ELSE?</span>
+      <h2>Не нашли нужный товар?</h2>
+      <p>Напишите нам, и мы обсудим ваш запрос.</p>
+      <a href="https://t.me/ApexCodeHelp"
+         target="_blank" rel="noopener noreferrer"
+         class="button primary">Связаться с нами</a>
+    </section>
+  </main>
+
+  <div class="product-modal" id="productModal"
+    role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+
+    <div class="modal-overlay" id="modalOverlay"></div>
+
+    <div class="modal-content">
+      <button class="modal-close" id="modalClose"
+        aria-label="Закрыть окно">×</button>
+
+      <span class="eyebrow">PRODUCT DETAILS</span>
+      <h2 id="modalTitle">Название товара</h2>
+      <p id="modalDescription"></p>
+
+      <button type="button" class="button primary" id="requestProductButton">Оставить заявку</button>
+      <p id="productRequestFeedback" role="status" aria-live="polite"></p>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">A</span>
+      <span>Apex<span class="accent">Code</span></span>
+    </a>
+    <p>© 2026 ApexCode. Все права защищены.</p>
+    <span class="footer-caption">Создаём. Автоматизируем. Развиваем.</span>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/products.js"></script>
+</body>
+</html>

@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101112">
+  <meta name="description" content="Портфолио ApexCode — наши цифровые проекты и Telegram-боты.">
+
+  <title>Проекты — ApexCode</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/projects.css">
+</head>
+<body>
+
+  <header class="header">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">A</span>
+      <span>Apex<span class="accent">Code</span></span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle"
+      aria-label="Открыть меню" aria-expanded="false">☰</button>
+
+    <nav class="navigation" id="navigation">
+      <a href="index.html">Главная</a>
+      <a href="services.html">Услуги</a>
+      <a href="projects.html" class="active">Проекты</a>
+      <a href="index.html#products">Товары</a>
+      <a href="pricing.html">Цены</a>
+      <a href="index.html#contacts">Контакты</a>
+      <a href="support.html">Поддержка</a>
+    </nav>
+
+    <a href="index.html#contacts" class="account-button">Связаться</a>
+  </header>
+
+  <main>
+    <section class="projects-hero">
+      <span class="eyebrow">APEXCODE PORTFOLIO</span>
+      <h1>Наши <span class="accent">проекты</span></h1>
+      <p>
+        Знакомьтесь с цифровыми продуктами, которые уже существуют
+        и развиваются в экосистеме ApexCode.
+      </p>
+
+      <div class="projects-counter">
+        <div class="counter-icon">✦</div>
+        <div>
+          <strong>Наше портфолио</strong>
+          <span>Реальные проекты и разработки</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="portfolio-section">
+      <div class="portfolio-heading">
+        <div>
+          <span class="eyebrow">SELECTED WORK</span>
+          <h2>Портфолио</h2>
+        </div>
+
+        <input
+          type="search"
+          id="projectSearch"
+          placeholder="Найти проект..."
+          aria-label="Поиск проектов"
+        >
+      </div>
+
+      <div class="project-filters" id="projectFilters">
+        <button class="filter-button active" data-filter="all">Все проекты</button>
+        <button class="filter-button" data-filter="telegram">Telegram</button>
+      </div>
+
+      <div class="portfolio-grid" id="portfolioGrid">
+
+        <article class="portfolio-card"
+          data-category="telegram"
+          data-search="starshopnam telegram бот star shop nam">
+
+          <div class="portfolio-preview preview-one">
+            <span class="preview-symbol">S</span>
+            <span class="preview-label">TELEGRAM PROJECT</span>
+          </div>
+
+          <div class="portfolio-content">
+            <div class="portfolio-meta">
+              <span>TELEGRAM BOT</span>
+              <span>01 / 03</span>
+            </div>
+
+            <h3>StarShopnam</h3>
+            <p>
+              Действующий Telegram-проект в портфолио ApexCode.
+              Подробное описание функциональности будет добавлено
+              после заполнения карточки проекта.
+            </p>
+
+            <a href="https://t.me/StarShopnam_bot"
+               target="_blank" rel="noopener noreferrer"
+               class="portfolio-link">Открыть Telegram-бота →</a>
+          </div>
+        </article>
+
+        <article class="portfolio-card"
+          data-category="telegram"
+          data-search="exeshopp telegram бот exe shopp">
+
+          <div class="portfolio-preview preview-two">
+            <span class="preview-symbol">E</span>
+            <span class="preview-label">TELEGRAM PROJECT</span>
+          </div>
+
+          <div class="portfolio-content">
+            <div class="portfolio-meta">
+              <span>TELEGRAM BOT</span>
+              <span>02 / 03</span>
+            </div>
+
+            <h3>ExeShopp</h3>
+            <p>
+              Действующий Telegram-проект в портфолио ApexCode.
+              Подробное описание функциональности будет добавлено
+              после заполнения карточки проекта.
+            </p>
+
+            <a href="https://t.me/ExeShoppBot"
+               target="_blank" rel="noopener noreferrer"
+               class="portfolio-link">Открыть Telegram-бота →</a>
+          </div>
+        </article>
+
+        <article class="portfolio-card"
+          data-category="telegram"
+          data-search="theopenguarantorsrobot telegram бот">
+
+          <div class="portfolio-preview preview-three">
+            <span class="preview-symbol">G</span>
+            <span class="preview-label">TELEGRAM PROJECT</span>
+          </div>
+
+          <div class="portfolio-content">
+            <div class="portfolio-meta">
+              <span>TELEGRAM BOT</span>
+              <span>03 / 03</span>
+            </div>
+
+            <h3>TheOpenGuarantors</h3>
+            <p>
+              Действующий Telegram-проект в портфолио ApexCode.
+              Подробное описание функциональности будет добавлено
+              после заполнения карточки проекта.
+            </p>
+
+            <a href="https://t.me/TheOpenGuarantorsRobot"
+               target="_blank" rel="noopener noreferrer"
+               class="portfolio-link">Открыть Telegram-бота →</a>
+          </div>
+        </article>
+
+      </div>
+
+      <p class="empty-projects" id="emptyProjects" hidden>
+        Проекты не найдены.
+      </p>
+    </section>
+
+    <section class="projects-cta">
+      <span class="eyebrow">HAVE AN IDEA?</span>
+      <h2>Следующий проект может быть вашим</h2>
+      <p>Расскажите нам о своей идее — обсудим её реализацию.</p>
+
+      <a href="https://t.me/ApexCodeHelp"
+         target="_blank" rel="noopener noreferrer"
+         class="button primary">Обсудить проект</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">A</span>
+      <span>Apex<span class="accent">Code</span></span>
+    </a>
+    <p>© 2026 ApexCode. Все права защищены.</p>
+    <span class="footer-caption">Создаём. Автоматизируем. Развиваем.</span>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/projects.js"></script>
+</body>
+</html>
